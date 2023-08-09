@@ -8,17 +8,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Optional background color for the page */
+  background-color: #f0f0f0;
 }
 
 .grid {
-  border: 1px solid #070707;
   height: 15px;
   width: 15px;
-}
-
-.grid-color {
-  background-color: red;
 }
 
 :root {
@@ -28,8 +23,10 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  border: 1px solid;
+  background-color: rgb(230, 190, 190);
   display: grid;
-  grid-template-rows: repeat(var(--grid-rows));
+  grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-cols), 15px);
   width: fit-content;
 }
